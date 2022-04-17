@@ -4,6 +4,8 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+
+	ge "github.com/yijun-tang/hello-go/gin_examples"
 )
 
 func main() {
@@ -24,6 +26,10 @@ func main() {
 		// will output : {"lang":"GO\u8bed\u8a00","tag":"\u003cbr\u003e"}
 		c.AsciiJSON(http.StatusOK, data)
 	})
+
+	r.GET("/getb", ge.GetDataB)
+	r.GET("/getc", ge.GetDataC)
+	r.GET("/getd", ge.GetDataD)
 
 	r.Run() // listen and serve on 0.0.0.0:8080
 }
