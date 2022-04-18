@@ -1,4 +1,4 @@
-package tdd_demo
+package tdddemo
 
 import (
 	"net/http"
@@ -6,7 +6,6 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/yijun-tang/hello-go/mock_server"
 )
 
 func TestGetMessage(t *testing.T) {

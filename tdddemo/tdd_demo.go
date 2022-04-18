@@ -1,4 +1,4 @@
-package tdd_demo
+package tdddemo
 
 import (
 	"encoding/json"
