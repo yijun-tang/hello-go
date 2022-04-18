@@ -6,6 +6,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
+	"github.com/yijun-tang/hello-go/mockserver"
 )
 
 func TestGetMessage(t *testing.T) {
@@ -30,7 +31,7 @@ func TestGetMessage(t *testing.T) {
 }
 
 func mockClientAndServer() (*Client, *httptest.Server) {
-	mockApiServer := mock_server.ThirdPartyAPIServerMock()
+	mockApiServer := mockserver.ThirdPartyAPIServerMock()
 	mockClient := MockClient(mockApiServer)
 
 	return mockClient, mockApiServer
