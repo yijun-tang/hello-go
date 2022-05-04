@@ -31,5 +31,10 @@ func main() {
 	r.GET("/getc", ge.GetDataC)
 	r.GET("/getd", ge.GetDataD)
 
+	r.GET("/:name/:id", ge.BindUri)
+
+	// TODO:
+	// Current: Custome Validators
+
 	r.Run() // listen and serve on 0.0.0.0:8080
 }

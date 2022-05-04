@@ -9,8 +9,3 @@ func setupRouter() *gin.Engine {
 	})
 	return r
 }
-
-func main() {
-	r := setupRouter()
-	r.Run(":8080")
-}
