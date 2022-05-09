@@ -4,8 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-
-	ge "github.com/yijun-tang/hello-go/gin_examples"
+	"github.com/yijun-tang/hello-go/ginexamples"
 )
 
 func main() {
@@ -27,11 +26,11 @@ func main() {
 		c.AsciiJSON(http.StatusOK, data)
 	})
 
-	r.GET("/getb", ge.GetDataB)
-	r.GET("/getc", ge.GetDataC)
-	r.GET("/getd", ge.GetDataD)
+	r.GET("/getb", ginexamples.GetDataB)
+	r.GET("/getc", ginexamples.GetDataC)
+	r.GET("/getd", ginexamples.GetDataD)
 
-	r.GET("/:name/:id", ge.BindUri)
+	r.GET("/:name/:id", ginexamples.BindUri)
 
 	// TODO:
 	// Current: Custome Validators
@@ -79,4 +78,17 @@ func Job(id int, jobType string) {
 	time.Sleep(time.Second)
 	jobMap[id] = id
 	fmt.Printf("[%v]: Job %v has finished...\n", jobType, id)
+} */
+
+/* func main() {
+
+	done := make(chan struct{})
+
+	go func() {
+		time.Sleep(time.Second * 2)
+		close(done)
+	}()
+
+	<-done
+	fmt.Println("channel closed...")
 } */
