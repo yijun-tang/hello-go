@@ -92,3 +92,20 @@ func Job(id int, jobType string) {
 	<-done
 	fmt.Println("channel closed...")
 } */
+
+// close chan
+/* func main() {
+
+	done := make(chan struct{})
+
+	go func() {
+		time.Sleep(time.Second * 2)
+		close(done)
+	}()
+
+	select {
+	case <-done:
+		fmt.Println("channel closed...")
+	}
+
+} */
