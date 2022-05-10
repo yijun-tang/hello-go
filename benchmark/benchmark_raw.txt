@@ -1,0 +1,25 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/yijun-tang/hello-go/benchmark
+BenchmarkPrimeNumbers1/input_size_100-10         	 3314308	       341.5 ns/op
+BenchmarkPrimeNumbers1/input_size_100-10         	 3398096	       345.2 ns/op
+BenchmarkPrimeNumbers1/input_size_100-10         	 3450537	       346.6 ns/op
+BenchmarkPrimeNumbers1/input_size_100-10         	 3543852	       338.3 ns/op
+BenchmarkPrimeNumbers1/input_size_100-10         	 3547288	       338.2 ns/op
+BenchmarkPrimeNumbers1/input_size_1000-10        	  299341	      3877 ns/op
+BenchmarkPrimeNumbers1/input_size_1000-10        	  290370	      3930 ns/op
+BenchmarkPrimeNumbers1/input_size_1000-10        	  295332	      3985 ns/op
+BenchmarkPrimeNumbers1/input_size_1000-10        	  300559	      3915 ns/op
+BenchmarkPrimeNumbers1/input_size_1000-10        	  280002	      4040 ns/op
+BenchmarkPrimeNumbers1/input_size_74382-10       	     793	   1523825 ns/op
+BenchmarkPrimeNumbers1/input_size_74382-10       	     796	   1479680 ns/op
+BenchmarkPrimeNumbers1/input_size_74382-10       	     802	   1475489 ns/op
+BenchmarkPrimeNumbers1/input_size_74382-10       	     808	   1476007 ns/op
+BenchmarkPrimeNumbers1/input_size_74382-10       	     807	   1490316 ns/op
+BenchmarkPrimeNumbers1/input_size_382399-10      	      90	  12807263 ns/op
+BenchmarkPrimeNumbers1/input_size_382399-10      	      92	  12743491 ns/op
+BenchmarkPrimeNumbers1/input_size_382399-10      	      91	  12748134 ns/op
+BenchmarkPrimeNumbers1/input_size_382399-10      	      90	  12770348 ns/op
+BenchmarkPrimeNumbers1/input_size_382399-10      	      91	  12862408 ns/op
+PASS
+ok  	github.com/yijun-tang/hello-go/benchmark	26.560s
