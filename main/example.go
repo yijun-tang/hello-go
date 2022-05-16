@@ -2,12 +2,17 @@ package main
 
 import (
 	"net/http"
+	_ "net/http/pprof"
 
 	"github.com/gin-gonic/gin"
 	"github.com/yijun-tang/hello-go/ginexamples"
 )
 
 func main() {
+	go func() {
+		http.ListenAndServe("0.0.0.0:8899", nil)
+	}()
+
 	r := gin.Default()
 
 	r.GET("/ping", func(c *gin.Context) {
