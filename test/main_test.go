@@ -6,6 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
+	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -38,4 +39,31 @@ func TestBasics(t *testing.T) {
 	var i interface{}
 	fmt.Printf("i is: %v\n", i)
 
+}
+
+type CError struct {
+}
+
+func (c CError) Error() string {
+	return "CError"
+}
+
+func TestA(t *testing.T) {
+	var i []byte = nil
+	fmt.Println(len(i))
+	/* cause := errors.New("whoops")
+	fmt.Printf("%+v\n", cause)
+
+	err := errors.WithStack(cause)
+	fmt.Printf("%+v\n", err)
+
+	fmt.Printf("%+v\n", CError{}) */
+
+	// fmt.Printf("%+v\n", f())
+}
+
+func f() error {
+	cause := errors.New("whoops")
+	err := errors.WithStack(cause)
+	return err
 }
